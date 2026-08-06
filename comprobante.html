@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -8,59 +9,11 @@
 
 <title>Comprobante de Registro</title>
 
+<link rel="stylesheet" href="style.css">
+
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-
-background:#eef3f8;
-
-}
-
-header{
-
-background:#005A9C;
-color:white;
-padding:20px;
-
-}
-
-header h1{
-
-text-align:center;
-
-}
-
-nav{
-
-margin-top:15px;
-display:flex;
-justify-content:center;
-gap:40px;
-
-}
-
-nav a{
-
-color:white;
-text-decoration:none;
-font-weight:bold;
-
-}
-
-nav a:hover{
-
-text-decoration:underline;
-
-}
-
-main{
+.constancia{
 
 width:800px;
 margin:40px auto;
@@ -68,120 +21,87 @@ background:white;
 padding:40px;
 border-radius:10px;
 box-shadow:0 4px 15px rgba(0,0,0,.2);
-
-}
-
-h2{
-
 text-align:center;
+
+}
+
+.constancia h1{
+
 color:#005A9C;
-margin-bottom:25px;
+margin-bottom:20px;
 
 }
 
-table{
 
-width:100%;
-border-collapse:collapse;
-margin-top:20px;
+.titulo{
 
-}
-
-td{
-
-padding:12px;
-border:1px solid #ddd;
-
-}
-
-td:first-child{
-
+border:2px solid #005A9C;
+padding:15px;
+margin:25px 0;
+font-size:22px;
 font-weight:bold;
-background:#f4f4f4;
-width:35%;
 
 }
+
+
+.datos{
+
+text-align:left;
+margin-top:25px;
+line-height:2;
+
+}
+
+
+.folio{
+
+font-size:18px;
+font-weight:bold;
+color:#005A9C;
+
+}
+
 
 .mensaje{
 
-margin-top:30px;
-padding:18px;
-background:#eef8ee;
-border-left:5px solid #198754;
-line-height:1.6;
+margin-top:25px;
+text-align:justify;
 
 }
 
-.botones{
-
-margin-top:35px;
-display:flex;
-justify-content:center;
-gap:20px;
-
-}
 
 button{
 
-padding:14px 28px;
-font-size:15px;
+margin-top:30px;
+padding:12px 25px;
+background:#005A9C;
+color:white;
 border:none;
 border-radius:5px;
 cursor:pointer;
-font-weight:bold;
 
 }
 
-.imprimir{
-
-background:#198754;
-color:white;
-
-}
-
-.regresar{
-
-background:#0d6efd;
-color:white;
-
-}
-
-footer{
-
-margin-top:35px;
-text-align:center;
-font-size:14px;
-color:#666;
-
-}
-
-@media print{
-
-button{
-
-display:none;
-
-}
-
-nav{
-
-display:none;
-
-}
-
-}
 
 </style>
 
+
 </head>
+
 
 <body>
 
+
 <header>
 
-<h1>Portal Institucional de la Red de Mentores Académicos</h1>
+<h1>
+Portal Institucional de la Red de Mentores Académicos
+</h1>
+
 
 <nav>
+
+<a href="index.html">Inicio</a>
 
 <a href="registro.html">Registro</a>
 
@@ -193,190 +113,147 @@ display:none;
 
 </header>
 
-<main>
 
-<h2>Comprobante de Registro</h2>
 
-<table>
+<div class="constancia">
 
-<tr>
 
-<td>Folio</td>
+<h1>
+Red de Mentores Académicos
+</h1>
 
-<td id="folio"></td>
 
-</tr>
+<div class="titulo">
 
-<tr>
+CONSTANCIA DE REGISTRO DE ASPIRANTE
 
-<td>Nombre completo</td>
+</div>
 
-<td id="nombre"></td>
 
-</tr>
 
-<tr>
+<p>
 
-<td>Número de cuenta</td>
+La Coordinación de la Red de Mentores Académicos hace constar que el estudiante ha realizado correctamente su registro dentro del proceso de incorporación al programa.
 
-<td id="cuenta"></td>
+</p>
 
-</tr>
 
-<tr>
 
-<td>Escuela o Plantel</td>
+<div class="datos">
 
-<td id="escuela"></td>
 
-</tr>
+<p>
+<b>Folio de registro:</b>
+<span id="folio"></span>
+</p>
 
-<tr>
 
-<td>Correo institucional</td>
+<p>
+<b>Nombre del aspirante:</b>
+<span id="nombre"></span>
+</p>
 
-<td id="correo"></td>
 
-</tr>
+<p>
+<b>Plantel registrado:</b>
+<span id="escuela"></span>
+</p>
 
-<tr>
 
-<td>Promedio general</td>
+<p>
+<b>Número de cuenta:</b>
+<span id="cuenta"></span>
+</p>
 
-<td id="promedio"></td>
 
-</tr>
+<p>
+<b>Correo electrónico:</b>
+<span id="correo"></span>
+</p>
 
-<tr>
 
-<td>Materia seleccionada</td>
+<p>
+<b>Materia de interés:</b>
+<span id="materia"></span>
+</p>
 
-<td id="materia"></td>
 
-</tr>
+<p>
+<b>Semestre:</b>
+<span id="semestre"></span>
+</p>
 
-<tr>
 
-<td>Semestre</td>
 
-<td id="semestre"></td>
+</div>
 
-</tr>
 
-<tr>
-
-<td>Documento recibido</td>
-
-<td id="archivo"></td>
-
-</tr>
-
-<tr>
-
-<td>Fecha del registro</td>
-
-<td id="fechaRegistro"></td>
-
-</tr>
-
-<tr>
-
-<td>Hora del registro</td>
-
-<td id="horaRegistro"></td>
-
-</tr>
-
-</table>
 
 <div class="mensaje">
 
-<b>Su solicitud ha sido registrada correctamente.</b>
 
-<br><br>
+<p>
 
-El resultado del proceso de selección será enviado al correo electrónico registrado en un plazo no mayor a <b>15 días hábiles</b>, de conformidad con la disponibilidad presupuestal y los lineamientos institucionales.
+La solicitud fue registrada correctamente. La información proporcionada será revisada conforme a los lineamientos establecidos para el proceso de selección.
 
-<br><br>
+</p>
 
-Conserve este comprobante para cualquier aclaración posterior.
 
-</div>
+<p>
 
-<div class="botones">
+El resultado del proceso será enviado al correo electrónico registrado en un plazo no mayor a <b>15 días hábiles</b>.
 
-<button
-class="imprimir"
-onclick="window.print()">
+</p>
 
-Imprimir comprobante
 
-</button>
+<p>
 
-<button
-class="regresar"
-onclick="window.location.href='registro.html'">
+Para cualquier aclaración, conserve este comprobante de registro.
 
-Nuevo registro
+</p>
 
-</button>
 
 </div>
 
-</main>
 
-<footer>
 
-Coordinación de la Red de Mentores Académicos
+<button onclick="window.print()">
 
-<br><br>
+Imprimir constancia
 
-Correo electrónico:
-<b>javierpalmaromero09@gmail.com</b>
+</button>
 
-<br>
 
-Teléfono:
-<b>722 202 9221</b>
 
-<br>
+</div>
 
-Horario:
-<b>Lunes a viernes de 08:00 a 16:00 horas.</b>
 
-</footer>
+
 
 <script>
 
+
 let datos = JSON.parse(localStorage.getItem("registroMentores"));
 
-if(datos){
 
-document.getElementById("folio").innerHTML = datos.folio;
+document.getElementById("folio").textContent = datos.folio;
 
-document.getElementById("nombre").innerHTML = datos.nombre;
+document.getElementById("nombre").textContent = datos.nombre;
 
-document.getElementById("cuenta").innerHTML = datos.cuenta;
+document.getElementById("escuela").textContent = datos.escuela;
 
-document.getElementById("escuela").innerHTML = datos.escuela;
+document.getElementById("cuenta").textContent = datos.cuenta;
 
-document.getElementById("correo").innerHTML = datos.correo;
+document.getElementById("correo").textContent = datos.correo;
 
-document.getElementById("promedio").innerHTML = datos.promedio;
+document.getElementById("materia").textContent = datos.materia;
 
-document.getElementById("materia").innerHTML = datos.materia;
+document.getElementById("semestre").textContent = datos.semestre;
 
-document.getElementById("semestre").innerHTML = datos.semestre;
-
-document.getElementById("archivo").innerHTML = datos.archivo;
-
-document.getElementById("fechaRegistro").innerHTML = datos.fechaRegistro;
-
-document.getElementById("horaRegistro").innerHTML = datos.horaRegistro;
-
-}
 
 </script>
+
+
 
 </body>
 
