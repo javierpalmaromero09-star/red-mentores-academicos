@@ -1,57 +1,7 @@
-// ================================
-// Verificar información
-// ================================
-
-function verificar() {
-
-    let nombre = document.getElementById("nombre").value;
-    let cuenta = document.getElementById("cuenta").value;
-    let escuela = document.getElementById("escuela").value;
-    let correo = document.getElementById("correo").value;
-
-    if(nombre=="" || cuenta=="" || escuela=="" || correo==""){
-
-        alert("Primero complete todos los campos obligatorios.");
-
-        return;
-
-    }
-
-    alert(
-        "La información ha sido verificada correctamente.\n\nRevise nuevamente sus datos antes de enviar la solicitud."
-    );
-
-}
-
-
-
-// ===================================
-// Envío del formulario
-// ===================================
-
-document.getElementById("registroForm").addEventListener("submit",function(e){
+document.getElementById("registroForm").addEventListener("submit", function(e){
 
     e.preventDefault();
 
-
-
-    // Generar folio
-
-    let folio = "RMA-" + Math.floor(Math.random()*90000+10000);
-
-
-
-    // Obtener fecha y hora
-
-    let fechaActual = new Date();
-
-    let fechaRegistro = fechaActual.toLocaleDateString("es-MX");
-
-    let horaRegistro = fechaActual.toLocaleTimeString("es-MX");
-
-
-
-    // Guardar datos
 
     let datos = {
 
@@ -61,7 +11,7 @@ document.getElementById("registroForm").addEventListener("submit",function(e){
 
         escuela: document.getElementById("escuela").value,
 
-        fechaNacimiento: document.getElementById("fecha").value,
+        fecha: document.getElementById("fecha").value,
 
         correo: document.getElementById("correo").value,
 
@@ -71,23 +21,16 @@ document.getElementById("registroForm").addEventListener("submit",function(e){
 
         semestre: document.getElementById("semestre").value,
 
-        archivo:
 
-        document.getElementById("archivo").files.length>0 ?
+        // Genera folio automático
+        folio:
+        "RMA-" + Math.floor(Math.random()*90000+10000)
 
-        document.getElementById("archivo").files[0].name :
-
-        "No adjuntado",
-
-        folio: folio,
-
-        fechaRegistro: fechaRegistro,
-
-        horaRegistro: horaRegistro
 
     };
 
 
+    // Guarda los datos del aspirante
 
     localStorage.setItem(
 
@@ -98,15 +41,9 @@ document.getElementById("registroForm").addEventListener("submit",function(e){
     );
 
 
-
-    alert(
-
-        "La solicitud fue enviada correctamente.\n\nSe generará el comprobante de registro."
-
-    );
-
-
+    // Envía a la constancia
 
     window.location.href="comprobante.html";
+
 
 });
