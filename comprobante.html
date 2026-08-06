@@ -1,32 +1,383 @@
-<h1>Red de Mentores Académicos</h1>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Comprobante de Registro</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+background:#eef3f8;
+
+}
+
+header{
+
+background:#005A9C;
+color:white;
+padding:20px;
+
+}
+
+header h1{
+
+text-align:center;
+
+}
+
+nav{
+
+margin-top:15px;
+display:flex;
+justify-content:center;
+gap:40px;
+
+}
+
+nav a{
+
+color:white;
+text-decoration:none;
+font-weight:bold;
+
+}
+
+nav a:hover{
+
+text-decoration:underline;
+
+}
+
+main{
+
+width:800px;
+margin:40px auto;
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 4px 15px rgba(0,0,0,.2);
+
+}
+
+h2{
+
+text-align:center;
+color:#005A9C;
+margin-bottom:25px;
+
+}
+
+table{
+
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+
+}
+
+td{
+
+padding:12px;
+border:1px solid #ddd;
+
+}
+
+td:first-child{
+
+font-weight:bold;
+background:#f4f4f4;
+width:35%;
+
+}
+
+.mensaje{
+
+margin-top:30px;
+padding:18px;
+background:#eef8ee;
+border-left:5px solid #198754;
+line-height:1.6;
+
+}
+
+.botones{
+
+margin-top:35px;
+display:flex;
+justify-content:center;
+gap:20px;
+
+}
+
+button{
+
+padding:14px 28px;
+font-size:15px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-weight:bold;
+
+}
+
+.imprimir{
+
+background:#198754;
+color:white;
+
+}
+
+.regresar{
+
+background:#0d6efd;
+color:white;
+
+}
+
+footer{
+
+margin-top:35px;
+text-align:center;
+font-size:14px;
+color:#666;
+
+}
+
+@media print{
+
+button{
+
+display:none;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Portal Institucional de la Red de Mentores Académicos</h1>
+
+<nav>
+
+<a href="registro.html">Registro</a>
+
+<a href="avisos.html">Avisos</a>
+
+<a href="contacto.html">Contacto</a>
+
+</nav>
+
+</header>
+
+<main>
 
 <h2>Comprobante de Registro</h2>
 
-<p><b>Folio:</b> <span id="folio"></span></p>
+<table>
 
-<p><b>Nombre:</b> <span id="nombre"></span></p>
+<tr>
 
-<p><b>Escuela:</b> <span id="escuela"></span></p>
+<td>Folio</td>
 
-<p><b>Correo:</b> <span id="correo"></span></p>
+<td id="folio"></td>
 
-<p>
-La solicitud fue registrada correctamente.
-</p>
+</tr>
 
-<p>
-El resultado del proceso de selección será enviado al correo registrado
-en un plazo no mayor a <b>15 días hábiles</b>.
-</p>
+<tr>
 
+<td>Nombre completo</td>
+
+<td id="nombre"></td>
+
+</tr>
+
+<tr>
+
+<td>Número de cuenta</td>
+
+<td id="cuenta"></td>
+
+</tr>
+
+<tr>
+
+<td>Escuela o Plantel</td>
+
+<td id="escuela"></td>
+
+</tr>
+
+<tr>
+
+<td>Correo institucional</td>
+
+<td id="correo"></td>
+
+</tr>
+
+<tr>
+
+<td>Promedio general</td>
+
+<td id="promedio"></td>
+
+</tr>
+
+<tr>
+
+<td>Materia seleccionada</td>
+
+<td id="materia"></td>
+
+</tr>
+
+<tr>
+
+<td>Semestre</td>
+
+<td id="semestre"></td>
+
+</tr>
+
+<tr>
+
+<td>Documento recibido</td>
+
+<td id="archivo"></td>
+
+</tr>
+
+<tr>
+
+<td>Fecha del registro</td>
+
+<td id="fechaRegistro"></td>
+
+</tr>
+
+<tr>
+
+<td>Hora del registro</td>
+
+<td id="horaRegistro"></td>
+
+</tr>
+
+</table>
+
+<div class="mensaje">
+
+<b>Su solicitud ha sido registrada correctamente.</b>
+
+<br><br>
+
+El resultado del proceso de selección será enviado al correo electrónico registrado en un plazo no mayor a <b>15 días hábiles</b>, de conformidad con la disponibilidad presupuestal y los lineamientos institucionales.
+
+<br><br>
+
+Conserve este comprobante para cualquier aclaración posterior.
+
+</div>
+
+<div class="botones">
+
+<button
+class="imprimir"
+onclick="window.print()">
+
+Imprimir comprobante
+
+</button>
+
+<button
+class="regresar"
+onclick="window.location.href='registro.html'">
+
+Nuevo registro
+
+</button>
+
+</div>
+
+</main>
+
+<footer>
+
+Coordinación de la Red de Mentores Académicos
+
+<br><br>
+
+Correo electrónico:
+<b>javierpalmaromero09@gmail.com</b>
+
+<br>
+
+Teléfono:
+<b>722 202 9221</b>
+
+<br>
+
+Horario:
+<b>Lunes a viernes de 08:00 a 16:00 horas.</b>
+
+</footer>
 
 <script>
 
 let datos = JSON.parse(localStorage.getItem("registroMentores"));
 
-document.getElementById("folio").innerHTML=datos.folio;
-document.getElementById("nombre").innerHTML=datos.nombre;
-document.getElementById("escuela").innerHTML=datos.escuela;
-document.getElementById("correo").innerHTML=datos.correo;
+if(datos){
+
+document.getElementById("folio").innerHTML = datos.folio;
+
+document.getElementById("nombre").innerHTML = datos.nombre;
+
+document.getElementById("cuenta").innerHTML = datos.cuenta;
+
+document.getElementById("escuela").innerHTML = datos.escuela;
+
+document.getElementById("correo").innerHTML = datos.correo;
+
+document.getElementById("promedio").innerHTML = datos.promedio;
+
+document.getElementById("materia").innerHTML = datos.materia;
+
+document.getElementById("semestre").innerHTML = datos.semestre;
+
+document.getElementById("archivo").innerHTML = datos.archivo;
+
+document.getElementById("fechaRegistro").innerHTML = datos.fechaRegistro;
+
+document.getElementById("horaRegistro").innerHTML = datos.horaRegistro;
+
+}
 
 </script>
+
+</body>
+
+</html>
