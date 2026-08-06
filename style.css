@@ -1,220 +1,97 @@
-/* ==========================
-   PORTAL RED DE MENTORES
-========================== */
+/* ===== ESTILOS PARA AVISOS ===== */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+.aviso{
+
+background:#f8f9fa;
+border-left:6px solid #005A9C;
+padding:25px;
+margin-bottom:25px;
+border-radius:8px;
+line-height:1.6;
+
 }
 
-body{
-    background:#eef3f8;
-    color:#333;
+
+.aviso h3{
+
+color:#005A9C;
+margin-bottom:15px;
+
 }
 
-/* ENCABEZADO */
 
-header{
-    background:#005A9C;
-    color:white;
-    padding:18px 40px;
+
+/* ===== ESTILOS PARA CONTACTO ===== */
+
+.contacto{
+
+background:#f8f9fa;
+padding:30px;
+border-radius:10px;
+line-height:1.8;
+border:1px solid #ddd;
+
 }
 
-header h1{
-    text-align:center;
-    font-size:30px;
-    margin-bottom:15px;
+
+.contacto h3{
+
+color:#005A9C;
+margin-bottom:20px;
+
 }
+
+
+
+/* ===== NAVEGACIÓN ===== */
 
 nav{
-    text-align:center;
+
+text-align:center;
+margin-top:15px;
+
 }
+
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 18px;
-    font-size:17px;
-    font-weight:bold;
+
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:bold;
+
 }
+
 
 nav a:hover{
-    text-decoration:underline;
-}
 
-/* CONTENIDO */
-
-main{
-
-    width:900px;
-    margin:40px auto;
-    background:white;
-    border-radius:10px;
-    padding:40px;
-    box-shadow:0px 5px 20px rgba(0,0,0,.15);
+text-decoration:underline;
 
 }
 
-h2{
 
-    color:#005A9C;
-    margin-bottom:20px;
 
-}
-
-p{
-
-    line-height:1.6;
-
-}
-
-/* TARJETAS */
-
-.card{
-
-    background:#f8f9fa;
-    border-left:6px solid #005A9C;
-    padding:20px;
-    margin:25px 0;
-    border-radius:8px;
-
-}
-
-/* FORMULARIOS */
-
-form{
-
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:18px;
-
-}
-
-.campo{
-
-    display:flex;
-    flex-direction:column;
-
-}
-
-label{
-
-    font-weight:bold;
-    margin-bottom:7px;
-
-}
-
-input,
-select{
-
-    padding:11px;
-    border:1px solid #bbb;
-    border-radius:5px;
-    font-size:15px;
-
-}
-
-.archivo{
-
-    grid-column:1/3;
-
-}
-
-/* BOTONES */
-
-.botones{
-
-    grid-column:1/3;
-    display:flex;
-    justify-content:space-between;
-    margin-top:20px;
-
-}
-
-button{
-
-    padding:14px 28px;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
-    color:white;
-    font-size:15px;
-    font-weight:bold;
-
-}
-
-.verificar{
-
-    background:#0d6efd;
-
-}
-
-.enviar{
-
-    background:#198754;
-
-}
+/* ===== BOTONES ===== */
 
 button:hover{
 
-    opacity:.9;
+opacity:0.85;
 
 }
 
-/* TABLAS */
 
-table{
 
-    width:100%;
-    border-collapse:collapse;
-    margin-top:20px;
+/* ===== RESPONSIVO PARA CELULAR ===== */
 
-}
+@media(max-width:900px){
 
-table th{
-
-    background:#005A9C;
-    color:white;
-    padding:10px;
-
-}
-
-table td{
-
-    border:1px solid #ddd;
-    padding:10px;
-
-}
-
-/* PIE */
-
-footer{
-
-    margin-top:50px;
-    background:#005A9C;
-    color:white;
-    text-align:center;
-    padding:18px;
-
-}
-
-footer p{
-
-    margin:5px;
-
-}
-
-/* RESPONSIVO */
-
-@media(max-width:950px){
 
 main{
 
-width:95%;
+width:90%;
 
 }
+
 
 form{
 
@@ -222,11 +99,20 @@ grid-template-columns:1fr;
 
 }
 
+
 .archivo,
 .botones{
 
 grid-column:1;
 
 }
+
+
+.constancia{
+
+width:90%;
+
+}
+
 
 }
