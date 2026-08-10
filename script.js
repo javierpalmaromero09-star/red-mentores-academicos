@@ -24,8 +24,7 @@ document.getElementById("registroForm").addEventListener("submit", function(e){
 
         // Genera folio automático
         folio:
-        "RMA-" + Math.floor(Math.random()*90000+10000)
-
+        "folio: "26B-" + Math.floor(Math.random() * 900 + 100)
 
     };
 
