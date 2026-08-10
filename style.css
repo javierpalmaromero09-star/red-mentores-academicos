@@ -602,3 +602,173 @@ footer {
     }
 
 }
+
+/* =========================================
+   CONSTANCIA DE REGISTRO
+   ========================================= */
+
+.comprobante{
+
+    text-align:center;
+    padding:40px;
+
+}
+
+
+.comprobante h1{
+
+    color:#005A9C;
+    font-size:28px;
+    margin-bottom:10px;
+
+}
+
+
+.comprobante h2{
+
+    color:#333;
+    font-size:23px;
+    margin-bottom:30px;
+
+}
+
+
+.comprobante > p{
+
+    color:#555;
+    line-height:1.7;
+    margin-bottom:25px;
+
+}
+
+
+.datos-constancia{
+
+    text-align:left;
+
+    background:#f8f9fa;
+
+    border:1px solid #d9e2ec;
+
+    border-radius:8px;
+
+    padding:20px;
+
+    margin:25px 0;
+
+}
+
+
+.datos-constancia p{
+
+    margin:12px 0;
+    line-height:1.5;
+
+}
+
+
+.folio{
+
+    color:#005A9C;
+    font-size:20px;
+    font-weight:bold;
+
+}
+
+
+.registro-exitoso{
+
+    background:#f0f7f2;
+
+    border-left:6px solid #198754;
+
+    padding:20px;
+
+    margin:25px 0;
+
+    text-align:left;
+
+    line-height:1.6;
+
+}
+
+
+.atentamente{
+
+    margin-top:45px;
+
+    padding-top:25px;
+
+    border-top:1px solid #ddd;
+
+    text-align:center;
+
+    line-height:1.7;
+
+}
+
+
+.atentamente p{
+
+    margin:6px 0;
+
+}
+
+
+.boton-imprimir{
+
+    margin-top:30px;
+
+    background:#005A9C;
+
+    color:white;
+
+    padding:13px 25px;
+
+    border:none;
+
+    border-radius:6px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+
+.boton-imprimir:hover{
+
+    background:#004477;
+
+}
+
+
+/* =========================================
+   FORMATO DE IMPRESIÓN
+   ========================================= */
+
+@media print{
+
+    body{
+
+        background:white;
+
+    }
+
+    main{
+
+        width:100%;
+        max-width:none;
+        margin:0;
+        box-shadow:none;
+        border-radius:0;
+
+    }
+
+    .boton-imprimir{
+
+        display:none;
+
+    }
+
+}
