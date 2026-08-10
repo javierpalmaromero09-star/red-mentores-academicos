@@ -1,48 +1,75 @@
-document.getElementById("registroForm").addEventListener("submit", function(e){
+document.addEventListener("DOMContentLoaded", function () {
 
-    e.preventDefault();
+    const formulario = document.getElementById("registroForm");
 
+    formulario.addEventListener("submit", function (e) {
 
-    let datos = {
+        e.preventDefault();
 
-        nombre: document.getElementById("nombre").value,
+        // Obtener datos del formulario
+        const nombre = document.getElementById("nombre").value.trim();
+        const cuenta = document.getElementById("cuenta").value.trim();
+        const escuela = document.getElementById("escuela").value;
+        const fecha = document.getElementById("fecha").value;
+        const correo = document.getElementById("correo").value.trim();
+        const promedio = document.getElementById("promedio").value;
+        const materia = document.getElementById("materia").value;
+        const semestre = document.getElementById("semestre").value;
+        const archivo = document.getElementById("archivo").files[0];
 
-        cuenta: document.getElementById("cuenta").value,
+        // Verificar que todos los campos estén completos
+        if (
+            nombre === "" ||
+            cuenta === "" ||
+            escuela === "" ||
+            fecha === "" ||
+            correo === "" ||
+            promedio === "" ||
+            materia === "" ||
+            semestre === "" ||
+            !archivo
+        ) {
 
-        escuela: document.getElementById("escuela").value,
+            alert("Debe completar todos los campos y adjuntar la documentación en PDF.");
 
-        fecha: document.getElementById("fecha").value,
+            return;
+        }
 
-        correo: document.getElementById("correo").value,
+        // Verificar que el archivo sea PDF
+        if (archivo.type !== "application/pdf") {
 
-        promedio: document.getElementById("promedio").value,
+            alert("La documentación debe adjuntarse en formato PDF.");
 
-        materia: document.getElementById("materia").value,
+            return;
+        }
 
-        semestre: document.getElementById("semestre").value,
+        // Generar folio 26B-XXX
+        const folio = "26B-" + Math.floor(Math.random() * 900 + 100);
 
+        // Crear objeto con la información
+        const datos = {
 
-        // Genera folio automático
-        folio:
-        "folio: "26B-" + Math.floor(Math.random() * 900 + 100)
+            folio: folio,
+            nombre: nombre,
+            cuenta: cuenta,
+            escuela: escuela,
+            fecha: fecha,
+            correo: correo,
+            promedio: promedio,
+            materia: materia,
+            semestre: semestre
 
-    };
+        };
 
+        // Guardar información en el navegador
+        localStorage.setItem(
+            "registroMentores",
+            JSON.stringify(datos)
+        );
 
-    // Guarda los datos del aspirante
+        // Ir al comprobante
+        window.location.href = "comprobante.html";
 
-    localStorage.setItem(
-
-        "registroMentores",
-
-        JSON.stringify(datos)
-
-    );
-
-
-    // Envía a la constancia
-
-    window.location.href="comprobante.html";
-
+    });
 
 });
