@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -7,253 +6,128 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Comprobante de Registro</title>
+<title>Constancia de Registro | Red de Mentores Académicos</title>
 
 <link rel="stylesheet" href="style.css">
 
-<style>
-
-.constancia{
-
-width:800px;
-margin:40px auto;
-background:white;
-padding:40px;
-border-radius:10px;
-box-shadow:0 4px 15px rgba(0,0,0,.2);
-text-align:center;
-
-}
-
-.constancia h1{
-
-color:#005A9C;
-margin-bottom:20px;
-
-}
-
-
-.titulo{
-
-border:2px solid #005A9C;
-padding:15px;
-margin:25px 0;
-font-size:22px;
-font-weight:bold;
-
-}
-
-
-.datos{
-
-text-align:left;
-margin-top:25px;
-line-height:2;
-
-}
-
-
-.folio{
-
-font-size:18px;
-font-weight:bold;
-color:#005A9C;
-
-}
-
-
-.mensaje{
-
-margin-top:25px;
-text-align:justify;
-
-}
-
-
-button{
-
-margin-top:30px;
-padding:12px 25px;
-background:#005A9C;
-color:white;
-border:none;
-border-radius:5px;
-cursor:pointer;
-
-}
-
-
-</style>
-
-
 </head>
-
 
 <body>
 
+<main>
 
-<header>
+<div class="comprobante">
 
-<h1>
-Portal Institucional de la Red de Mentores Académicos
-</h1>
+<h1>Red de Mentores Académicos</h1>
 
-
-<nav>
-
-<a href="index.html">Inicio</a>
-
-<a href="registro.html">Registro</a>
-
-<a href="avisos.html">Avisos</a>
-
-<a href="contacto.html">Contacto</a>
-
-</nav>
-
-</header>
-
-
-
-<div class="constancia">
-
-
-<h1>
-Red de Mentores Académicos
-</h1>
-
-
-<div class="titulo">
-
-CONSTANCIA DE REGISTRO DE ASPIRANTE
-
-</div>
-
-
+<h2>CONSTANCIA DE REGISTRO</h2>
 
 <p>
-
-La Coordinación de la Red de Mentores Académicos hace constar que el estudiante ha realizado correctamente su registro dentro del proceso de incorporación al programa.
-
+Por medio de la presente se hace constar que la persona cuyos datos
+se indican a continuación realizó correctamente su registro como
+aspirante a la Red de Mentores Académicos, correspondiente al periodo 2026-B.
 </p>
 
 
-
-<div class="datos">
-
+<div class="datos-constancia">
 
 <p>
 <b>Folio de registro:</b>
-<span id="folio"></span>
+<span id="folio" class="folio"></span>
 </p>
 
-
 <p>
-<b>Nombre del aspirante:</b>
+<b>Nombre:</b>
 <span id="nombre"></span>
 </p>
 
-
 <p>
-<b>Plantel registrado:</b>
+<b>Escuela o Plantel:</b>
 <span id="escuela"></span>
 </p>
-
-
-<p>
-<b>Número de cuenta:</b>
-<span id="cuenta"></span>
-</p>
-
 
 <p>
 <b>Correo electrónico:</b>
 <span id="correo"></span>
 </p>
 
+</div>
+
+
+<div class="registro-exitoso">
 
 <p>
-<b>Materia de interés:</b>
-<span id="materia"></span>
+<strong>Registro realizado correctamente.</strong>
 </p>
-
 
 <p>
-<b>Semestre:</b>
-<span id="semestre"></span>
+La presente constancia acredita únicamente la recepción de la
+solicitud y documentación correspondiente al proceso de selección.
 </p>
 
-
+<p>
+El resultado del proceso de selección será enviado al correo
+electrónico registrado en un plazo no mayor a
+<strong>15 días hábiles</strong> posteriores al cierre del periodo de registro.
+</p>
 
 </div>
 
 
+<div class="atentamente">
 
-<div class="mensaje">
-
-
-<p>
-
-La solicitud fue registrada correctamente. La información proporcionada será revisada conforme a los lineamientos establecidos para el proceso de selección.
-
-</p>
-
+<p><strong>A T E N T A M E N T E</strong></p>
 
 <p>
-
-El resultado del proceso será enviado al correo electrónico registrado en un plazo no mayor a <b>15 días hábiles</b>.
-
+<strong>Coordinación de la Red de Mentores Académicos</strong>
 </p>
-
 
 <p>
-
-Para cualquier aclaración, conserve este comprobante de registro.
-
+Correo electrónico: javierpalmaromero09@gmail.com
 </p>
 
+<p>
+Teléfono: 722 202 9221
+</p>
+
+<p>
+Ubicación: Av. Heroico Colegio Militar esquina con Diego Rivera s/n,
+Colonia Los Ángeles, C.P. 50020, Toluca, Estado de México.
+</p>
+
+<p>
+Horario de atención: lunes a viernes de 8:00 a 16:00 hrs.
+</p>
 
 </div>
 
 
-
-<button onclick="window.print()">
-
-Imprimir constancia
-
+<button onclick="window.print()" class="boton-imprimir">
+Imprimir / Guardar como PDF
 </button>
 
-
-
 </div>
 
-
+</main>
 
 
 <script>
 
-
 let datos = JSON.parse(localStorage.getItem("registroMentores"));
 
+if(datos){
 
-document.getElementById("folio").textContent = datos.folio;
+    document.getElementById("folio").textContent = datos.folio;
 
-document.getElementById("nombre").textContent = datos.nombre;
+    document.getElementById("nombre").textContent = datos.nombre;
 
-document.getElementById("escuela").textContent = datos.escuela;
+    document.getElementById("escuela").textContent = datos.escuela;
 
-document.getElementById("cuenta").textContent = datos.cuenta;
+    document.getElementById("correo").textContent = datos.correo;
 
-document.getElementById("correo").textContent = datos.correo;
-
-document.getElementById("materia").textContent = datos.materia;
-
-document.getElementById("semestre").textContent = datos.semestre;
-
+}
 
 </script>
-
-
 
 </body>
 
