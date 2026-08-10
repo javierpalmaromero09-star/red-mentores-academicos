@@ -329,7 +329,134 @@ footer{
 
     }
 
+/* =========================================
+   DOCUMENTACIÓN DEL PROCESO
+   ========================================= */
 
+.documentos {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.documentos h3 {
+    color: #005A9C;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.documentos > p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.documentos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.documento {
+    background: #f8fafc;
+    border: 1px solid #d9e2ec;
+    border-radius: 10px;
+    padding: 22px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.documento:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.documento h4 {
+    color: #005A9C;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.documento p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.boton-documento {
+    display: block;
+    background: #005A9C;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 11px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.boton-documento:hover {
+    background: #004477;
+}
+
+
+/* =========================================
+   CONVOCATORIA EN INICIO
+   ========================================= */
+
+.convocatoria-inicio {
+    margin-top: 25px;
+    padding: 22px;
+    background: #f8fafc;
+    border-left: 5px solid #005A9C;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.convocatoria-inicio h3 {
+    color: #005A9C;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.convocatoria-inicio p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.boton-convocatoria {
+    display: inline-block;
+    background: #005A9C;
+    color: white;
+    text-decoration: none;
+    padding: 11px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.boton-convocatoria:hover {
+    background: #004477;
+}
+
+
+/* =========================================
+   ADAPTACIÓN PARA CELULAR
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .documentos-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+    
     form{
 
         grid-template-columns:1fr;
