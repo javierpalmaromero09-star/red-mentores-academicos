@@ -373,23 +373,232 @@ footer {
     }
 }
 
-@media (max-width: 700px) {
+/* =========================================
+   RESPONSIVO
+   ========================================= */
 
-    form {
-        grid-template-columns: 1fr;
+@media(max-width:700px){
+
+    main{
+        width:95%;
+    }
+
+    form{
+        grid-template-columns:1fr;
     }
 
     .archivo,
-    .botones {
-        grid-column: 1;
+    .botones{
+        grid-column:1;
     }
 
-    nav a {
-        display: block;
-        margin: 10px;
+    nav a{
+        display:block;
+        margin:10px;
     }
 
-    header h1 {
-        font-size: 22px;
+}
+
+
+/* =========================================
+   DOCUMENTACIÓN DEL PROCESO
+   ========================================= */
+
+.documentos{
+
+    margin-top:35px;
+    margin-bottom:35px;
+
+}
+
+.documentos h3{
+
+    color:#005A9C;
+    font-size:22px;
+    margin-bottom:10px;
+
+}
+
+.documentos > p{
+
+    color:#555;
+    line-height:1.6;
+    margin-bottom:25px;
+
+}
+
+
+/* TARJETAS DE DOCUMENTOS */
+
+.documentos-grid{
+
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+
+}
+
+
+.documento{
+
+    background:#f8f9fa;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:22px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+    display:flex;
+    flex-direction:column;
+
+    transition:.2s;
+
+}
+
+
+.documento:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 6px 16px rgba(0,0,0,.14);
+
+}
+
+
+.documento h4{
+
+    color:#005A9C;
+    font-size:18px;
+    margin-bottom:12px;
+
+}
+
+
+.documento p{
+
+    color:#555;
+    font-size:14px;
+    line-height:1.6;
+    margin-bottom:20px;
+
+    flex-grow:1;
+
+}
+
+
+/* BOTÓN DE CADA DOCUMENTO */
+
+.boton-documento{
+
+    display:block;
+
+    background:#005A9C;
+    color:white;
+
+    text-decoration:none;
+
+    text-align:center;
+
+    padding:12px 15px;
+
+    border-radius:6px;
+
+    font-size:14px;
+    font-weight:bold;
+
+    transition:.2s;
+
+}
+
+
+.boton-documento:hover{
+
+    background:#004477;
+
+}
+
+
+/* =========================================
+   CONVOCATORIA EN INICIO
+   ========================================= */
+
+.convocatoria-inicio{
+
+    margin-top:30px;
+
+    padding:25px;
+
+    background:#f8f9fa;
+
+    border-left:6px solid #005A9C;
+
+    border-radius:10px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+}
+
+
+.convocatoria-inicio h3{
+
+    color:#005A9C;
+
+    font-size:21px;
+
+    margin-bottom:10px;
+
+}
+
+
+.convocatoria-inicio p{
+
+    color:#555;
+
+    line-height:1.6;
+
+    margin-bottom:18px;
+
+}
+
+
+.boton-convocatoria{
+
+    display:inline-block;
+
+    background:#005A9C;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 20px;
+
+    border-radius:6px;
+
+    font-weight:bold;
+
+    transition:.2s;
+
+}
+
+
+.boton-convocatoria:hover{
+
+    background:#004477;
+
+}
+
+
+/* =========================================
+   DOCUMENTACIÓN EN CELULAR
+   ========================================= */
+
+@media(max-width:800px){
+
+    .documentos-grid{
+
+        grid-template-columns:1fr;
+
     }
+
 }
